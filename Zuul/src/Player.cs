@@ -68,6 +68,10 @@ class Player
         return true;
     }
 
-
+      public string ShowBackpack()        
+    {
+        return backpack.Show();
+    }
 
 }
+
