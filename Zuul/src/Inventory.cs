@@ -16,7 +16,6 @@ class Inventory
     // methods
     public bool Put(string itemName, Item item)
     {
-        // Check weight
         if (item.Weight > FreeWeight())
             return false;
 
@@ -59,5 +58,17 @@ class Inventory
             result += $"{pair.Key} ({pair.Value.Weight}kg)\n";
 
         return result;
+    }
+
+    // Return all items without removing them
+    public Dictionary<string, Item> GetAllItems()
+    {
+        return new Dictionary<string, Item>(items);
+    }
+
+    // Check if inventory has a specific item
+    public bool HasItem(string itemName)
+    {
+        return items.ContainsKey(itemName);
     }
 }

@@ -14,7 +14,9 @@ class CommandLibrary
 		validCommands.Add("go");
 		validCommands.Add("look");
 		validCommands.Add("take");
+		validCommands.Add("use");
 		validCommands.Add("drop");
+		validCommands.Add("inspect");
 		validCommands.Add("status");
 		validCommands.Add("quit");
 	}
